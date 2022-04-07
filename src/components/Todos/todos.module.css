@@ -1,0 +1,53 @@
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 690px;
+  margin: auto;
+  padding: 0 5px;
+  cursor: pointer;
+  box-sizing: border-box;
+  height: 50px;
+  border-radius: 10px;
+  margin-top: 10px;
+  background-color: rgba(163, 162, 162, 0.123);
+}
+p {
+  font-size: 27px;
+  color: white;
+}
+.buttonDel {
+  padding: 15px 20px;
+  border: unset;
+  border-radius: 6px;
+  color: #212121;
+  z-index: 1;
+  background: #e8e8e8;
+  position: relative;
+  font-weight: 1000;
+  font-size: 17px;
+  transition: all 250ms;
+  overflow: hidden;
+}
+.buttonDel::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  border-radius: 6px;
+  background-color: #fc0000;
+  z-index: -1;
+  transition: all 250ms;
+}
+.buttonDel:hover {
+  color: #e8e8e8;
+}
+.buttonDel:hover::before {
+  width: 100%;
+}
+.check[type="checkbox"] {
+  transform: scale(2);
+  padding-left: 10px;
+}

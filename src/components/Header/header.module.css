@@ -1,0 +1,88 @@
+.head {
+  width: 700px;
+  margin: auto;
+  position: relative;
+  display: flex;
+  margin-bottom: 30px;
+  padding-top: 40px;
+  justify-content: space-between;
+}
+.inputHead {
+  width: 75%;
+  padding-top: 5px;
+  padding-left: 16px;
+  padding-bottom: 5px;
+  color: black;
+  border: none;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  border-radius: 5px;
+  font-size: 25px;
+  height: 48px;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+.inputHead::placeholder {
+  text-align: center;
+}
+.inputHead:active,
+:hover,
+:focus {
+  outline: 0;
+  outline-offset: 0;
+}
+
+.buttonHead {
+  --color: #2e6aeb;
+  padding: 0.8em 1.7em;
+  background-color: transparent;
+  border-radius: 0.3em;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: 0.5s;
+  font-weight: 400;
+  font-size: 17px;
+  border: 1px solid;
+  font-family: inherit;
+  text-transform: uppercase;
+  color: var(--color);
+  z-index: 1;
+}
+
+.buttonHead::before,
+.buttonHead::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 50px;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  border-radius: 50%;
+  z-index: -1;
+  background-color: var(--color);
+  transition: 1s ease;
+}
+
+.buttonHead::before {
+  top: -1em;
+  left: -1em;
+}
+
+.buttonHead::after {
+  left: calc(100% + 1em);
+  top: calc(100% + 1em);
+}
+
+.buttonHead:hover::before,
+.buttonHead:hover::after {
+  height: 410px;
+  width: 410px;
+}
+
+.buttonHead:hover {
+  color: rgb(255, 255, 255);
+}
+
+.button:active {
+  filter: brightness(0.8);
+}
